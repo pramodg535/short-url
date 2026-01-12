@@ -4,11 +4,12 @@ import {connectMongoDB} from "./connection.js";
 import URL from "./models/url.js";
 import cors from "cors";
 
-const PORT=8001;
+
+const PORT = process.env.PORT || 8000;
 const app=express();
 
 //connection
-connectMongoDB("mongodb://127.0.0.1:27017/short-url")
+connectMongoDB(process.env.MONGO_URL)
 .then(()=>{console.log("mongoDB connected")})
 .catch((err) => console.error("MongoDB error:", err));
 
