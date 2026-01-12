@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #ffffff;
+  width: 360px;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.analytics {
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+input.error {
+  border: 2px solid #ef4444;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}

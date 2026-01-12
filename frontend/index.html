@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <div class="section">
+  <input
+    type="url"
+    id="urlInput"
+    placeholder="Enter long URL"
+  />
+  <button onclick="shortenURL()">Shorten URL</button>
+
+  
+  <div id="result" class="analytics"></div>
+</div>
+
+
+    <hr />
+
+    <!-- Analytics -->
+    <div class="section">
+      <input
+        type="text"
+        id="shortIdInput"
+        placeholder="Enter short ID (e.g. AbC123)"
+      />
+      <button onclick="getAnalytics()">Get Analytics</button>
+
+      <div id="analytics" class="analytics"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
