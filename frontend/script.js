@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://localhost:8001";
+const BASE_URL = "https://short-url-u567.onrender.com"; // use your Render URL
 
 /* Shorten URL */
 async function shortenURL() {
