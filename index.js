@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, "frontend")));
 app.use("/url",urlRoute);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "index.html"));
+  res.sendFile(path.resolve("./frontend/index.html"));
 });
 
 
@@ -46,6 +46,10 @@ app.get("/:shortId", async (req, res) => {
   if (!entry) return res.status(404).send("Not found");
 
   res.redirect(entry.redirectURL);
+});
+
+app.use((req, res) => {
+  res.status(404).send("Route not found");
 });
 
 

@@ -20,7 +20,7 @@ async function handleGenerateNewShortUrl(req, res) {
   }
   
   //  Prevent shortening own short URLs
-  const baseUrl = "http://localhost:8001";
+  const baseUrl = process.env.BASE_URL;
 
   if (url.startsWith(baseUrl)) {
     return res.status(400).json({
