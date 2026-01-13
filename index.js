@@ -3,9 +3,11 @@ import urlRoute from "./routes/url.js";
 import {connectMongoDB} from "./connection.js";
 import URL from "./models/url.js";
 import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 const app=express();
 
 //connection
@@ -19,6 +21,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/url",urlRoute);
+
+app.get('/', (req, res) => {
+  res.send('Short URL API is running!');
+});
 
 app.get("/:shortId", async (req, res) => {
   const { shortId } = req.params;
