@@ -162,7 +162,7 @@ GET /url/analytics/:shortId
 
  **Deployed URL:**
 [https://short-url-u567.onrender.com](https://short-url-u567.onrender.com)
-
+Cold Start Notice: This application is deployed on a free-tier server. Initial requests may experience a delay of up to 2-3 minutes due to server cold starts.
 ---
 
 ##  Learning Outcomes
